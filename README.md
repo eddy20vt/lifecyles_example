@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+PLEASE CHECK THIS URL BEFORE START CODING :)
+http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
 ## Available Scripts
 
 In the project directory, you can run:
