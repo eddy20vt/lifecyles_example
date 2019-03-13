@@ -12,14 +12,15 @@ class App extends Component {
   }
   onIncrementClick = () =>{
     return (
-      (this.state.counter + 1 <= 10) && 
       this.setState({counter:this.state.counter + 1}))
   }
 
   onDecrementClick = () =>{
     return (
-      (this.state.counter - 1 >= 0) && 
-      this.setState({counter:this.state.counter - 1}))
+      (this.state.counter - 1 >= 0)
+      ? this.setState({counter:this.state.counter - 1})
+      : this.setState({counter:this.state.counter})
+      )
   }
 
   render() {
@@ -31,9 +32,11 @@ class App extends Component {
             text='+'
             onClick={this.onIncrementClick}
           />
-          <Counter value={this.state.counter}/>
+          {this.state.counter <= 5 &&
+            <Counter value={this.state.counter}/>
+          }
           <Button
-          text='-'
+            text='-'
             onClick={this.onDecrementClick}
           />
         </div>
